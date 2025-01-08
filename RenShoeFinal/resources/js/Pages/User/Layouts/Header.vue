@@ -87,7 +87,7 @@ import { XMarkIcon } from '@heroicons/vue/20/solid'
                                 <Link :href="route('profile.edit')" class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Account Settings</Link>
                             </li>
                             <li>
-                                <Link :href="route('logout')" method="post" class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log Out</Link>
+                                <Link :href="route('logout')"  class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log Out</Link>
                             </li>
                         </ul>
                     </div>

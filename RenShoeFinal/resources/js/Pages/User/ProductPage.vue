@@ -1,18 +1,17 @@
 <script setup>
 import { ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import UserLayouts from './Layouts/UserLayouts.vue';
+import { useRouter, useRoute } from 'vue-router';
+import UserLayouts from './Layouts/UserLayouts.vue';  
+import { router as routerInertia } from "@inertiajs/vue3";
 
 const router = useRouter();
-const route = useRoute();
 
 defineProps({
   product: Object,
 });
 
 const addToCart = (product) => {
-    console.log(product)
-    router.post(route('cart.store', product), {
+    routerInertia.post(route('cart.store', product), {
         onSuccess: (page) => {
             if (page.props.flash.success) {
                 Swal.fire({

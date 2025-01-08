@@ -109,10 +109,19 @@ class ProductController extends Controller
         return redirect()->route('admin.products.index')->with('success', 'Image deleted successfully!');
     }
 
-    public function destroy($id){
-        $product = Product::findOrFail($id)->delete();
+    public function destroy($id) {
+        $product = Product::findOrFail($id);
+    
+        if ($product->cartItems()->count() > 0) {
+            return redirect()->route('admin.products.index')->with('error', 'Cannot delete product as it is associated with cart items.');
+        }
+    
+        $product->delete();
+    
         return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully!');
     }
+    
+    
 }
 
 

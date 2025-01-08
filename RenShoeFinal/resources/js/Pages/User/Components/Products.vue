@@ -27,9 +27,9 @@ const addToCart = (product) => {
 </script>
 
 <template>
-    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        <div v-for="product in products" :key="product.id" class="group relative">
-            <img v-if="product.product_images.length > 0" :src="`/${product.product_images[0].image}`" :alt="product.imageAlt" class="aspect-square w-full rounded-md bg-transparent object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
+    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 ">
+        <div v-for="product in products" :key="product.id" class="group relative hover:shadow px-4 py-4 rounded" >
+            <img v-if="product.product_images.length > 0" :src="`/${product.product_images[0].image}`" :alt="product.imageAlt" class="aspect-square w-full rounded-md bg-transparent object-cover lg:aspect-auto lg:h-80" />
             <img v-else src="https://atticrrg.com/wp-content/uploads/2022/07/Untitled-Phone-Wallpaper-e1718385340165-731x1024.png" :alt="product.imageAlt" class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80" />
 
             <!--ADD TO CART HOVER BUTTON-->

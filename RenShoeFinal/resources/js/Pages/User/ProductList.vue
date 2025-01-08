@@ -27,7 +27,7 @@ const sortOptions = [
 ]
 
 const filterPrices = useForm({
-    prices: [0, 100000]
+    prices: [0, 3000]
 })
 
 //Price filtering Method

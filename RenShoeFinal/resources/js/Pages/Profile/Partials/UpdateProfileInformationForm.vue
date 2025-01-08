@@ -58,7 +58,7 @@ const form = useForm({
                             </div>
                             <div>
                                 <InputLabel for="contact_num" value="Phone Number" />
-                                <TextInput id="contact_num" v-model="form.contact_num" type="numeric" class="w-full" />
+                                <TextInput id="contact_num" v-model="form.contact_num" type="number" class="w-full" />
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-4">

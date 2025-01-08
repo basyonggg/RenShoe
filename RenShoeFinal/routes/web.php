@@ -67,7 +67,7 @@ Route::get('/detail/{id}', [ProductPageController::class, 'show'])->name('produc
 Route::group(['prefix' => 'admin', 'middleware' => 'redirectAdmin'], function () {
     Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('login', [AdminAuthController::class, 'login'])->name('admin.login.post');
-    Route::post('logout', [AdminAuthController::class, 'logout'])->name('logout');
+    Route::get('logout', [AdminAuthController::class, 'logout'])->name('logout');
 });
 
 //for Stocks
