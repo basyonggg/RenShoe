@@ -18,7 +18,7 @@ defineProps({
     <!-- Dashboard Header -->
     <div class="max-w-7xl mx-auto p-6">
         <h1 class="text-xl font-bold mb-2">Hello, {{ authUser.first_name }}</h1>
-        <p class="text-gray-600">This is your account dashboard. You can easily check & view your <a href="recent-orders.html" class="font-bold text-black hover:underline">Recent Orders</a>, manage your <a href="shipping-addresses.html" class="font-bold text-black hover:underline">Shipping Addresses</a>.</p>
+        <p class="text-gray-600">This is your account dashboard. You can easily check & view your <a href="recent-orders.html" class="font-bold text-black hover:underline">Recent Orders</a>, manage your <Link :href="route('profile.edit')" class="font-bold text-black hover:underline">Shipping Addresses</Link>.</p>
 
         <div class="grid grid-cols-3 gap-6 mt-6 items-start">
             <!-- Account Info -->
@@ -28,7 +28,6 @@ defineProps({
                     <img src="https://via.placeholder.com/80" alt="Profile Picture" class="w-20 h-20 rounded-full">
                     <div>
                         <h3 class="text-lg font-bold">{{ authUser.last_name }}, {{ authUser.first_name }}</h3>
-                       
                     </div>
                 </div>
                 <div class="mt-8 space-y-1 flex-grow">

@@ -28,8 +28,8 @@ class ProductController extends Controller
                 'categories' => $categories
             ]
         );
-
     }
+
 
     public function store(Request $request){
 
